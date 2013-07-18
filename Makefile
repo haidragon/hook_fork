@@ -3,7 +3,7 @@ TARGET=hook_bind_lo.so
 all: hook_fork.so test_main
 
 hook_fork.so: hook_fork.c
-	gcc -Wall -fPIC -shared -o hook_fork.so hook_fork.c -ldl
+	gcc -Wall -fPIC -shared -o hook_fork.so hook_fork.c
 
 test_main: test_main.c
 	gcc -o test_main test_main.c
