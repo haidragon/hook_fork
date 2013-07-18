@@ -1,0 +1,3 @@
+*.swp
+hook_fork.so
+test_main
