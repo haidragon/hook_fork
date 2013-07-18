@@ -1,5 +1,5 @@
 //
-//	hook_bind_lo.cpp - bind() function hook sample
+//	hook_fork.cpp - fork() function hook sample
 //
 //  shell:
 //	    $ LD_PRELOD=/path/to/hook_fork.so ./target_program
