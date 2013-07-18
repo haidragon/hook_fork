@@ -20,7 +20,7 @@ gdbserver
 ========
 <pre>
   $ gdbserver --wrapper env LD_PRELOAD=./hook_fork.so -- :2222 ./test_main
-<pre>
+</pre>
 
 see also:
   * http://sourceware.org/gdb/current/onlinedocs/gdb/Server.html
