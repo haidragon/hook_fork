@@ -1,3 +1,4 @@
 *.swp
-hook_fork.so
+*.so
+*.dylib
 test_main

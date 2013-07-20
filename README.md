@@ -4,8 +4,16 @@ fork() function hook sample
 
 shell
 ========
+Linux, FreeBSD
 <pre>
+  $ gcc -Wall -fPIC -shared -o hook_fork.so hook_fork.c
   $ LD_PRELOD=/path/to/hook_fork.so ./target_program
+</pre>
+
+Mac OS X
+<pre>
+  $ gcc -Wall -fPIC -shared -o hook_fork.dylib hook_fork.c
+  $ DYLD_INSERT_LIBRARIES=/path/to/hook_fork.dylib DYLD_FORCE_FLAT_NAMESPACE=Y ./target_program
 </pre>
 
 gdb
