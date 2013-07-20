@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ $# -lt 1 ]; then
+	echo "usage : hook_fork command [args...]" 1>&2
+	echo 
+	exit 1
+fi
+
+export BASE_DIR=`dirname $0`
+export LD_PRELOAD=${BASE_DIR}/hook_fork.so
+
+exec $1 $2 $3 $4 $5 $6 $7 $8 $9 
