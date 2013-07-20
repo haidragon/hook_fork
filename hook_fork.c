@@ -2,7 +2,13 @@
 //	hook_fork.cpp - fork() function hook sample
 //
 //  shell:
-//	    $ LD_PRELOD=/path/to/hook_fork.so ./target_program
+//     Linux, FreeBSD
+//       $ gcc -Wall -fPIC -shared -o hook_fork.so hook_fork.c
+//       $ LD_PRELOD=/path/to/hook_fork.so ./target_program
+//     
+//     Mac OS X
+//       $ gcc -Wall -fPIC -shared -o hook_fork.dylib hook_fork.c
+//       $ DYLD_INSERT_LIBRARIES=/path/to/hook_fork.dylib DYLD_FORCE_FLAT_NAMESPACE=Y ./target_program
 //
 //  gdb:
 //      $ gdb ./target_program
